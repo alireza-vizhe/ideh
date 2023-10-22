@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-on-netlify"
+
   },
   "dependencies": {
     "axios": "^1.5.1",
@@ -20,7 +20,6 @@
     "material-icons": "^1.13.12",
     "multer": "^1.4.5-lts.1",
     "next": "13.5.4",
-    "next-on-netlify": "^3.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "^6.1.0",
