@@ -1,0 +1,10 @@
+export const postsRoute = "http://localhost:5000/posts";
+export const articlesRoute = "http://localhost:5000/articles";
+export const contactUcRoute = "http://localhost:5000/send-support-email"
+export const deletePostRoute = "http://localhost:5000/delete-post"
+export const newPostRoute = "http://localhost:5000/new-post";
+export const updatePostRoute = "http://localhost:5000/update-post";
+export const writingArticleRoute = "http://localhost:5000/upload-image-article"
+export const getSingleArticleArticle = "http://localhost:5000/singe-article"
+export const editArticleRoute = "http://localhost:5000/edit-article";
+export const deleteArticleRoute = "http://localhost:5000/delete-article";
