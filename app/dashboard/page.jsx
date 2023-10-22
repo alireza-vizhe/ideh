@@ -9,10 +9,13 @@ import formatDate from "../utils/formatDate";
 import { Helmet } from "react-helmet";
 import { articlesRoute, deleteArticleRoute, deletePostRoute, postsRoute } from "../utils/routes";
 import toast from "react-hot-toast";
+import { getCookie, setCookie } from 'cookies-next';
 
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
   const [articles, setArticles] = useState([]);
+
+  console.log(getCookie("admin-of-ideh"));
 
   useEffect(() => {
     const getData = async () => {
@@ -51,6 +54,7 @@ const Dashboard = () => {
       });
   };
 
+
   const handleDeleteArticle = async (id) => {
     await axios.post(deleteArticleRoute, { id }).then((result) => {
       //console.log()(result);
@@ -62,9 +66,11 @@ const Dashboard = () => {
     });
   };
 
+
+
   return (
     <>
-      {localStorage.getItem("admin-of-ideh") === "M-A-5822-9260" ? (
+      {getCookie("admin-of-ideh") === "M-A-5822-9260" ? (
         <>
         <Helmet>
           <title>داشبورد | ایده نگار</title>

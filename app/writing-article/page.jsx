@@ -11,6 +11,7 @@ import { writingArticleRoute } from "../utils/routes";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import NotFound from "../not-found";
+import { getCookie, setCookie } from 'cookies-next';
 
 const WritingArticle = () => {
 
@@ -69,8 +70,8 @@ const WritingArticle = () => {
       };
 
     return (
-       <>
-        {localStorage.getItem("admin-of-ideh") === "M-A-5822-9260" ? (
+      <>
+      {getCookie("admin-of-ideh") === "M-A-5822-9260" ? (
         <>
         <Navbar/>
         <section className="py-5">

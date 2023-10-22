@@ -9,6 +9,7 @@ import NotFound from "../not-found";
 import { postSchema } from "../secure/newPostSchema";
 import { Helmet } from "react-helmet";
 import { newPostRoute } from "../utils/routes";
+import { getCookie, setCookie } from 'cookies-next';
 
 const NewPost = () => {
   const [name, setName] = useState();
@@ -66,7 +67,7 @@ const NewPost = () => {
 
   return (
     <>
-    {localStorage.getItem("admin-of-ideh") === "M-A-5822-9260" ? (
+    {getCookie("admin-of-ideh") === "M-A-5822-9260" ? (
       <>
       <Navbar />
       <Helmet>
